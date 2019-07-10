@@ -1,0 +1,41 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+
+	var nubers = [];
+
+	for(var i = 0; i < 5; i++){
+		var randomNumber = parseInt(Math.random() * 100);
+		nubers.push(randomNumber);
+	}
+	
+
+	alert("Запомните числа и их порядок: " + nubers);
+
+	var userAnswer = +prompt("Каким было первое число?");
+	alert(nubers[0]);
+	if (userAnswer == nubers[0]) {
+		alert("Все верно!");
+	} else {
+		alert("А вот и нет. Правильный ответ " + nubers[0]);
+	}
+
+	userAnswer = +prompt("А последнее?");
+	alert(nubers.length);
+	alert(nubers[ nubers.length - 1 ]);
+
+	if(userAnswer == nubers[ nubers.length - 1 ]){
+		alert("Все верно!");
+	} else {
+		alert("А вот и нет. Правильный ответ " + nubers[ nubers.length - 1]);
+	}
+
+	var n = parseInt(Math.random() * nubers.length);
+	userAnswer = +prompt("А как насчет числа под номером " + (n + 1) + "?");
+	if(userAnswer == nubers[ n ]){
+		alert("Все верно!");
+	} else {
+		alert("А вот и нет. Правильный ответ " + nubers [ n ]);
+	}
+
+</script>
