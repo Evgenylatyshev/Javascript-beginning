@@ -1,0 +1,45 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+var good = 0;
+
+function compareAnswers(userAnswer, Answer){
+		if (userAnswer == Answer) {
+			alert("Все верно!");
+		good ++;
+		} else {
+			alert("А вот и нет. Правильный ответ " + Answer);
+		}
+}
+
+alert("Добро пожаловать в игру Загадка");
+
+	var userAnswer = prompt("Зимой и летом одним цветом?");
+	var Answer = ("елка");
+	compareAnswers (userAnswer, Answer);
+	
+
+alert ("Вторая загадка");
+
+	var userAnswer = prompt("Кто его раздевает, тот слезы проливает?");
+	var Answer = ("лук");
+	compareAnswers (userAnswer, Answer);
+	
+
+alert ("Третья загадка");
+
+	var userAnswer = prompt("Весь мир одевает, сама нагишом?");
+	var Answer = ("игла");
+	compareAnswers (userAnswer, Answer);
+	
+		
+
+alert ("Четвертая загадка");
+
+	var userAnswer = prompt("Ни в огне не горит, ни в воде не тонет?");
+	var Answer = ("лед");
+	compareAnswers (userAnswer, Answer);
+	
+alert("Вы отгадали " + good + " загадки");	
+
+</script>
