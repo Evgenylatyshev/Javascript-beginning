@@ -1,0 +1,22 @@
+<meta charset="utf-8">
+<script>
+
+alert("Добро пожаловать в банковскую программу для расчета вашей доходности от вклада на ближайшие 5 лет");
+
+do	{
+	var money = parseInt (prompt('Введите сумму вклада'));
+	var procent = 1 + parseInt (prompt('Введите годовой процент'))/ 100;
+	}while(isNaN(money) || isNaN(procent) || money < 0 || procent < 0) 
+
+
+	var time = ['год',
+            	'два года',
+            	'три года',
+            	'четыре года',
+            	'пять лет'];
+for (var i = 0; i < 5; i++)
+    {
+    money = parseInt (money * procent);
+    alert ('Через ' + time [i] + ' на вашем счету будет\n' + money)
+    }
+</script>
