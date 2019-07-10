@@ -1,0 +1,46 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+
+function compareAnswers(userAnswer, answer){
+	if (userAnswer == answer) {
+		alert("Все верно!");
+	} else {
+		alert("А вот и нет. Правильный ответ " + answer);
+	}
+}
+
+function getRandomNumber(max){
+		return parseInt(Math.random() * max);
+
+}
+
+function generateRandomNumberArray(length){
+	var arr = [];
+
+	for(var i = 0; i < length; i++){
+		var randomNumder = getRandomNumber(100);
+		arr.push(randomNumder);
+	}
+
+	return arr;
+}
+
+var nubers = generateRandomNumberArray(5)
+	
+
+	alert("Запомните числа и их порядок: " + nubers);
+
+	var userAnswer = +prompt("Каким было первое число?");
+	compareAnswers (userAnswer, nubers[0])
+	
+	userAnswer = +prompt("А последнее?");
+	compareAnswers(userAnswer, nubers[ nubers.length - 1 ]);
+	
+
+	var n = getRandomNumber (nubers.length - 1);
+	userAnswer = +prompt("А как насчет числа под номером " + (n + 1) + "?");
+	compareAnswers(userAnswer, nubers[ n ])
+	
+
+</script>
